@@ -54,6 +54,8 @@ class Message {
   /// Provides max duration for recorded voice message.
   Duration? voiceMessageDuration;
 
+  Map<String,String>? obj;
+
   Message({
     this.id = '',
     required this.message,
@@ -64,6 +66,7 @@ class Message {
     this.messageType = MessageType.text,
     this.voiceMessageDuration,
     MessageStatus status = MessageStatus.pending,
+    this.obj
   })  : reaction = reaction ?? Reaction(reactions: [], reactedUserIds: []),
         key = GlobalKey(),
         _status = ValueNotifier(status),
