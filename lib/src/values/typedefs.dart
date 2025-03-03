@@ -87,3 +87,11 @@ typedef SuggestionItemBuilder = Widget Function(
   int index,
   SuggestionItemData suggestionItemData,
 );
+
+
+class MyNotification extends Notification {
+  const MyNotification(this.data);
+
+  // Any kind of data can go here!
+  final Message data;
+}
